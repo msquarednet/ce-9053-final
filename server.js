@@ -11,7 +11,7 @@ app.use(function(req,res,next) {
 
 
 
-var paths = ["/", "/people"];
+var paths = ["/", "/people", "/games", "/teams", "/teams/:id"];
 paths.forEach(function (path) {
   app.get(path, function (req,res,next) {
     res.render("index");
