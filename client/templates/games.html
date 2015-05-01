@@ -1,2 +1,10 @@
 <h1>Games</h1>
 <p>This is the Games page.</p>
+
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="g in thegames">
+        <a href="games/edit/{{g._id}}">{{g.name}}</a>
+    </i>
+</ul>
+
+<button class="btn btn-primary" ng-click="NavSvc.go('/games/edit')">Enter New Game</button>

@@ -1,0 +1,19 @@
+<h1>Games : {{ editnew }} Game</h1>
+<button type="button" ng-if="editnew==='Update'" ng-click="delete()" class="btn btn-primary" style="float:right;">Delete Game</button>
+<p>This is the {{ editnew }} Game page.</p>
+<form>
+  <div class="form-group">
+    <label for="name">_Id</label>
+    <input type="text" ng-model="thegame._id" class="form-control" id="_id" name="_id" value="{{thegame._id}}" readonly>
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" ng-model="thegame.name" class="form-control" id="name" name="name" value="{{thegame.name}}" placeholder="e.g. Asteroids">
+  </div>
+  <div class="form-group">
+    <label for="score">Score</label>
+    <input type="text" ng-model="thegame.score" class="form-control" id="score" name="score" value="{{thegame.score}}" placeholder="0">
+  </div>
+  <button type="button" ng-if="editnew==='Insert'" ng-click="insert()" class="btn btn-primary">Insert Game</button>
+  <button type="button" ng-if="editnew==='Update'" ng-click="update()" class="btn btn-primary">Update Game</button>
+</form>
